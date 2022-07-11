@@ -434,7 +434,7 @@ export const customersGrid = [
 ];
 
 export const employeesGrid = [
-  { headerText: 'Employee',
+  { headerText: 'Name',
     width: '150',
     template: gridEmployeeProfile,
     textAlign: 'Center' },
@@ -444,11 +444,11 @@ export const employeesGrid = [
     textAlign: 'Center',
   },
   { field: 'Title',
-    headerText: 'Designation',
+    headerText: 'Year',
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
+  { headerText: 'Branch',
     width: '120',
     textAlign: 'Center',
     template: gridEmployeeCountry },
