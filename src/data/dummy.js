@@ -21,7 +21,7 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+// import product8 from './product8.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -120,26 +120,26 @@ export const EditorData = () => (
     </h3>
   </div>
 );
-const customerGridImage = (props) => (
-  <div className="image flex gap-4">
-    <img
-      className="rounded-full w-10 h-10"
-      src={props.CustomerImage}
-      alt="employee"
-    />
-    <div>
-      <p>{props.CustomerName}</p>
-      <p>{props.CustomerEmail}</p>
-    </div>
-  </div>
-);
+// const customerGridImage = (props) => (
+//   <div className="image flex gap-4">
+//     <img
+//       className="rounded-full w-10 h-10"
+//       src={props.CustomerImage}
+//       alt="employee"
+//     />
+//     <div>
+//       <p>{props.CustomerName}</p>
+//       <p>{props.CustomerEmail}</p>
+//     </div>
+//   </div>
+// );
 
-const customerGridStatus = (props) => (
-  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
-    <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
-    <p>{props.Status}</p>
-  </div>
-);
+// const customerGridStatus = (props) => (
+//   <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+//     <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
+//     <p>{props.Status}</p>
+//   </div>
+// );
 export const areaPrimaryXAxis = {
   valueType: 'DateTime',
   labelFormat: 'y',
@@ -392,44 +392,44 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-  { type: 'checkbox', width: '50' },
-  { headerText: 'Name',
+  // { type: 'checkbox', width: '50' },
+  //    field: 'ASSIGNED BY',
+  //   headerText: 'ASSIGNED BY',
+  //   width: '150',
+  //   template: customerGridImage,
+  //   textAlign: 'Center' },
+  { field: 'Assigned_By ',
+    headerText: 'ASSIGNED BY',
     width: '150',
-    template: customerGridImage,
     textAlign: 'Center' },
-  { field: 'ProjectName',
-    headerText: 'Project Name',
-    width: '150',
-    textAlign: 'Center' },
-  { field: 'Status',
-    headerText: 'Status',
+  { field: 'Work_Done',
+    headerText: 'WORK DONE',
     width: '130',
     format: 'yMd',
-    textAlign: 'Center',
-    template: customerGridStatus },
-  {
-    field: 'Weeks',
-    headerText: 'Weeks',
-    width: '100',
-    format: 'C2',
     textAlign: 'Center' },
-  { field: 'Budget',
-    headerText: 'Budget',
+  // template: customerGridStatus },
+  // {
+  //   field: 'Weeks',
+  //   headerText: 'Weeks',
+  //   width: '100',
+  //   format: 'C2',
+  //   textAlign: 'Center' },
+  { field: 'Deadline',
+    headerText: 'DEADLINE',
     width: '100',
     format: 'yMd',
     textAlign: 'Center' },
 
-  { field: 'Location',
-    headerText: 'Location',
+  { field: 'Upload_Here ',
+    headerText: 'UPLOAD HERE',
     width: '150',
     textAlign: 'Center' },
 
-  { field: 'CustomerID',
-    headerText: 'Customer ID',
-    width: '120',
-    textAlign: 'Center',
-    isPrimaryKey: true,
-  },
+  { field: 'View_Key ',
+    headerText: 'VIEW KEY',
+    width: '150',
+    // format: 'yMd',
+    textAlign: 'Center' },
 
 ];
 
@@ -921,563 +921,566 @@ export const ordersGrid = [
 
 export const customersData = [
   {
-    CustomerID: 1001,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1002,
+    Assigned_By: '1001',
+    // CustomerName: 'Nirav Joshi',
+    // CustomerEmail: 'nirav@gmail.com',
+    // CustomerImage:
+    //   avatar2,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+    Deadline: '01.01.2023',
+    // ProjectName: 'Hosting Press HTML',
+    Work_Done: 'YES',
+    View_Key: '1',
+    // StatusBg: '#8BE78B',
+    // Weeks: '40',
+    // Budget: '$2.4k',
+    // Location: 'India',
+  },
+  // {
+  //   CustomerID: 1002,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1003,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1004,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1003,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1005,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1004,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1006,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1007,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1005,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1006,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1007,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1008,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1009,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1008,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1010,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1009,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1011,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1012,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1010,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1011,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1012,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1013,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1014,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1013,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1015,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1014,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1016,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1017,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1015,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1016,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1017,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1018,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1019,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1018,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1020,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1019,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1021,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1022,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1020,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1021,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1022,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1023,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1024,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1023,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1025,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1024,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1026,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1027,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1025,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1026,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1027,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1028,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1029,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1028,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1030,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1029,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1031,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1032,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1030,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1031,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1032,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1033,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1034,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1033,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1035,
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1034,
 
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1036,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1037,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1035,
 
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1036,
+  //   CustomerName: 'Nirav Joshi',
+  //   CustomerEmail: 'nirav@gmail.com',
+  //   CustomerImage:
+  //     avatar2,
+  //   ProjectName: 'Hosting Press HTML',
+  //   Status: 'Active',
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '40',
+  //   Budget: '$2.4k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1037,
 
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1038,
+  //   CustomerName: 'Sunil Joshi',
+  //   CustomerEmail: 'sunil@gmail.com',
+  //   ProjectName: 'Elite Admin',
+  //   Status: 'Active',
+  //   CustomerImage:
+  //     avatar3,
 
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1039,
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1040,
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '11',
+  //   Budget: '$3.9k',
+  //   Location: 'India',
+  // },
+  // {
+  //   CustomerID: 1038,
+
+  //   CustomerName: 'Andrew McDownland',
+  //   CustomerEmail: 'andrew@gmail.com',
+  //   ProjectName: 'Real Homes WP Theme',
+  //   Status: 'Pending',
+  //   CustomerImage:
+  //     avatar4,
+  //   StatusBg: '#FEC90F',
+  //   Weeks: '19',
+  //   Budget: '$24.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1039,
+  //   CustomerName: 'Christopher Jamil',
+  //   CustomerEmail: 'jamil@gmail.com',
+  //   ProjectName: 'MedicalPro WP Theme',
+  //   Status: 'Completed',
+  //   CustomerImage:
+  //     avatar,
+  //   StatusBg: '#8BE78B',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
+  // {
+  //   CustomerID: 1040,
+  //   CustomerName: 'Michael',
+  //   CustomerEmail: 'michael@gmail.com',
+  //   ProjectName: 'Weekly WP Theme',
+  //   Status: 'Cancel',
+  //   CustomerImage:
+  //     avatar2,
+  //   StatusBg: 'red',
+  //   Weeks: '34',
+  //   Budget: '$16.5k',
+  //   Location: 'USA',
+  // },
 
 ];
 
