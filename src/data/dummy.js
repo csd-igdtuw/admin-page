@@ -878,6 +878,54 @@ export const ordersGrid = [
     width: '120',
   },
   {
+    field: 'Team',
+    headerText: 'Team',
+    width: '150',
+    editType: 'dropdownedit',
+    textAlign: 'Center',
+  },
+  { field: 'EventName',
+    headerText: 'Event Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Date',
+    headerText: 'Date',
+    format: 'C2',
+    textAlign: 'Center',
+    editType: 'numericedit',
+    width: '150',
+  },
+  {
+    field: 'Time',
+    headerText: 'Time',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Venue',
+    headerText: 'Venue',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    headerText: 'Status',
+    template: gridOrderStatus,
+    field: 'OrderItems',
+    textAlign: 'Center',
+    width: '120',
+  },
+];
+
+/*export const ordersGrid = [
+  {
+    headerText: 'Image',
+    template: gridOrderImage,
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
     field: 'OrderItems',
     headerText: 'Item',
     width: '150',
@@ -917,7 +965,7 @@ export const ordersGrid = [
     width: '150',
     textAlign: 'Center',
   },
-];
+];*/
 
 export const customersData = [
   {
@@ -2124,6 +2172,89 @@ export const employeesData = [
 export const ordersData = [
   {
     OrderID: 10248,
+    CustomerName: 'Anjali vidya sagar',
+
+    Team: 'ADIRA',
+    EventName: 'DIGITERACY',
+    Date: '15 JULY',
+    Time: '4 PM',
+    Venue: 'GOOGLE MEET',
+    Status: 'PENDING',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 345653,
+    Team: 'EUDIMONIA',
+    EventName: 'CLOTH COLLECTION',
+    Date: '1 AUGUST ',
+    Time: '2 PM',
+    Venue: 'COLLEGE GROUND',
+    Status: 'PENDING',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 390457,
+    Team: 'ADIRA',
+    EventName: 'BOOK COLLECTION',
+    Date: '12 JUNE',
+    Time: '11 AM',
+    Venue: 'GOOGLE MEET',
+    Status: 'complete',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 893486,
+    Team: 'ADIRA',
+    EventName: 'DIGITERACY',
+    Date: '15 JULY',
+    Time: '4 PM',
+    Venue: 'GOOGLE MEET',
+    Status: 'PENDING',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 748975,
+    Team: 'ADIRA',
+    EventName: 'DIGITERACY',
+    Date: '15 JULY',
+    Time: '4 PM',
+    Venue: 'GOOGLE MEET',
+    Status: 'PENDING',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 94757,
+    Team: 'ADIRA',
+    EventName: 'GIRLS CODE',
+    Date: '15 AUGUST',
+    Time: '4 PM',
+    Venue: 'GOOGLE MEET',
+    Status: 'PENDING',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 944895,
+    Team: 'PEJAS',
+    EventName: 'PHOTOGRAPHY',
+    Date: '1 JULY',
+    Time: '4 PM',
+    Venue: 'GOOGLE MEET',
+    Status: 'INCOMPLETE',
+    ProductImage:
+      product5,
+  },
+  
+];
+
+/*export const ordersData = [
+  {
+    OrderID: 10248,
     CustomerName: 'Vinet',
 
     TotalAmount: 32.38,
@@ -2842,7 +2973,7 @@ export const ordersData = [
     ProductImage:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
   },
-];
+];*/
 
 export const scheduleData = [
   {
